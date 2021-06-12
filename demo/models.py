@@ -5,3 +5,6 @@ class Book (models.Model):
      description = models.TextField(max_length=256, blank=True)
      price = models.DecimalField(max_digits=16, decimal_places=2, default=0)
      is_published = models.BooleanField(default=False)
+
+     def __str__(self):
+          return self.title
